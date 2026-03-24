@@ -1,0 +1,15 @@
+name: brex_spend_intelligence
+version: '1.0.0'
+config-version: 2
+
+profile: brex_spend
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  brex_spend_intelligence:
+    +materialized: table
+    +schema: mart

@@ -1,0 +1,2091 @@
+[0m21:02:48.279542 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cfb0590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de3f9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de3fb10>]}
+
+
+============================== 21:02:48.287649 | ed423bd8-1a05-4e64-a3d3-5e9ea685676a ==============================
+[0m21:02:48.287649 [info ] [MainThread]: Running with dbt=1.11.7
+[0m21:02:48.288395 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'fail_fast': 'False', 'static_parser': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'printer_width': '80', 'version_check': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'profiles_dir': '.', 'partial_parse': 'True', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'log_cache_events': 'False', 'log_format': 'default', 'log_path': '/Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/logs', 'write_json': 'True', 'empty': 'False', 'introspect': 'True', 'target_path': 'None'}
+[0m21:02:48.669414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ed423bd8-1a05-4e64-a3d3-5e9ea685676a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d178c30>]}
+[0m21:02:48.756575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ed423bd8-1a05-4e64-a3d3-5e9ea685676a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcd6be0>]}
+[0m21:02:48.757984 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m21:02:48.888346 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m21:02:48.889239 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:02:48.889619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ed423bd8-1a05-4e64-a3d3-5e9ea685676a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dce7350>]}
+[0m21:02:50.813394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ed423bd8-1a05-4e64-a3d3-5e9ea685676a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e5c2e40>]}
+[0m21:02:50.937435 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m21:02:50.940287 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m21:02:50.980610 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ed423bd8-1a05-4e64-a3d3-5e9ea685676a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f016c10>]}
+[0m21:02:50.981136 [info ] [MainThread]: Found 1 model, 6 data tests, 1 source, 464 macros
+[0m21:02:50.981520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ed423bd8-1a05-4e64-a3d3-5e9ea685676a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e3e4460>]}
+[0m21:02:50.983655 [info ] [MainThread]: 
+[0m21:02:50.984046 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:02:50.984388 [info ] [MainThread]: 
+[0m21:02:50.984913 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:02:50.985802 [debug] [ThreadPool]: Acquiring new postgres connection 'list_brex_spend'
+[0m21:02:51.088915 [debug] [ThreadPool]: Using postgres connection "list_brex_spend"
+[0m21:02:51.089302 [debug] [ThreadPool]: On list_brex_spend: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "list_brex_spend"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:02:51.089660 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:02:51.171764 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.082 seconds
+[0m21:02:51.173385 [debug] [ThreadPool]: On list_brex_spend: Close
+[0m21:02:51.174241 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_brex_spend, now create_brex_spend_mart_mart)
+[0m21:02:51.175073 [debug] [ThreadPool]: Creating schema "database: "brex_spend"
+schema: "mart_mart"
+"
+[0m21:02:51.181478 [debug] [ThreadPool]: Using postgres connection "create_brex_spend_mart_mart"
+[0m21:02:51.182204 [debug] [ThreadPool]: On create_brex_spend_mart_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "create_brex_spend_mart_mart"} */
+create schema if not exists "mart_mart"
+[0m21:02:51.182571 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:02:51.211961 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.029 seconds
+[0m21:02:51.213392 [debug] [ThreadPool]: On create_brex_spend_mart_mart: COMMIT
+[0m21:02:51.213864 [debug] [ThreadPool]: Using postgres connection "create_brex_spend_mart_mart"
+[0m21:02:51.214268 [debug] [ThreadPool]: On create_brex_spend_mart_mart: COMMIT
+[0m21:02:51.217018 [debug] [ThreadPool]: SQL status: COMMIT in 0.002 seconds
+[0m21:02:51.217681 [debug] [ThreadPool]: On create_brex_spend_mart_mart: Close
+[0m21:02:51.221291 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_brex_spend_mart_mart, now list_brex_spend_mart_mart)
+[0m21:02:51.229171 [debug] [ThreadPool]: Using postgres connection "list_brex_spend_mart_mart"
+[0m21:02:51.229722 [debug] [ThreadPool]: On list_brex_spend_mart_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "list_brex_spend_mart_mart"} */
+select
+      'brex_spend' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'mart_mart'
+    union all
+    select
+      'brex_spend' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'mart_mart'
+    union all
+    select
+      'brex_spend' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'mart_mart'
+  
+[0m21:02:51.230160 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:02:51.266108 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.036 seconds
+[0m21:02:51.267690 [debug] [ThreadPool]: On list_brex_spend_mart_mart: ROLLBACK
+[0m21:02:51.269166 [debug] [ThreadPool]: On list_brex_spend_mart_mart: Close
+[0m21:02:51.274488 [debug] [MainThread]: Using postgres connection "master"
+[0m21:02:51.275044 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:02:51.275507 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:02:51.312872 [debug] [MainThread]: SQL status: SELECT 0 in 0.037 seconds
+[0m21:02:51.314672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ed423bd8-1a05-4e64-a3d3-5e9ea685676a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f0e9b50>]}
+[0m21:02:51.315487 [debug] [MainThread]: On master: ROLLBACK
+[0m21:02:51.317664 [debug] [MainThread]: On master: COMMIT
+[0m21:02:51.318179 [debug] [MainThread]: Using postgres connection "master"
+[0m21:02:51.318570 [debug] [MainThread]: On master: COMMIT
+[0m21:02:51.321783 [debug] [MainThread]: SQL status: COMMIT in 0.003 seconds
+[0m21:02:51.322319 [debug] [MainThread]: On master: Close
+[0m21:02:51.326384 [debug] [Thread-1 (]: Began running node model.brex_spend_intelligence.spend_mart
+[0m21:02:51.327276 [info ] [Thread-1 (]: 1 of 1 START sql table model mart_mart.spend_mart .............................. [RUN]
+[0m21:02:51.328156 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_brex_spend_mart_mart, now model.brex_spend_intelligence.spend_mart)
+[0m21:02:51.328873 [debug] [Thread-1 (]: Began compiling node model.brex_spend_intelligence.spend_mart
+[0m21:02:51.340198 [debug] [Thread-1 (]: Writing injected SQL for node "model.brex_spend_intelligence.spend_mart"
+[0m21:02:51.342392 [debug] [Thread-1 (]: Began executing node model.brex_spend_intelligence.spend_mart
+[0m21:02:51.416152 [debug] [Thread-1 (]: Writing runtime sql for node "model.brex_spend_intelligence.spend_mart"
+[0m21:02:51.417877 [debug] [Thread-1 (]: Using postgres connection "model.brex_spend_intelligence.spend_mart"
+[0m21:02:51.419101 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "model.brex_spend_intelligence.spend_mart"} */
+
+  
+    
+
+  create  table "brex_spend"."mart_mart"."spend_mart__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+/*
+  spend_mart.sql
+  ──────────────
+  Aggregates raw.transactions by department, category, and month.
+  Adds month-over-month (MoM) spend change and AI/policy violation rates.
+
+  Columns produced:
+    dept_category_month   Surrogate grain key
+    department
+    category
+    spend_month           First day of the month (DATE)
+    total_spend           Sum of amount_usd
+    transaction_count
+    avg_transaction       Average spend per transaction
+    policy_violation_cnt  Rule-based violations from generate_data.py
+    ai_flagged_cnt        Violations flagged by Claude
+    policy_violation_pct  % of transactions that violated policy
+    ai_flagged_pct        % of transactions AI-flagged
+    prev_month_spend      Spend in the prior calendar month
+    mom_change_usd        Absolute MoM change
+    mom_change_pct        Relative MoM change (NULL for first month in window)
+*/
+
+with
+
+base as (
+
+    select
+        department,
+        category,
+        date_trunc('month', transaction_date)::date as spend_month,
+        amount_usd,
+        policy_violation,
+        coalesce(ai_flagged, false)                 as ai_flagged
+
+    from "brex_spend"."raw"."transactions"
+    where transaction_date is not null
+
+),
+
+monthly as (
+
+    select
+        department,
+        category,
+        spend_month,
+
+        round(sum(amount_usd)::numeric, 2)          as total_spend,
+        count(*)                                     as transaction_count,
+        round(avg(amount_usd)::numeric, 2)           as avg_transaction,
+
+        sum(case when policy_violation then 1 else 0 end)
+                                                     as policy_violation_cnt,
+        sum(case when ai_flagged       then 1 else 0 end)
+                                                     as ai_flagged_cnt,
+
+        round(
+            100.0 * sum(case when policy_violation then 1 else 0 end)
+            / nullif(count(*), 0), 2
+        )                                            as policy_violation_pct,
+
+        round(
+            100.0 * sum(case when ai_flagged then 1 else 0 end)
+            / nullif(count(*), 0), 2
+        )                                            as ai_flagged_pct
+
+    from base
+    group by 1, 2, 3
+
+),
+
+with_mom as (
+
+    select
+        m.*,
+
+        lag(m.total_spend) over (
+            partition by m.department, m.category
+            order by m.spend_month
+        )                                            as prev_month_spend,
+
+        round(
+            m.total_spend - lag(m.total_spend) over (
+                partition by m.department, m.category
+                order by m.spend_month
+            ), 2
+        )                                            as mom_change_usd,
+
+        round(
+            100.0 * (
+                m.total_spend - lag(m.total_spend) over (
+                    partition by m.department, m.category
+                    order by m.spend_month
+                )
+            ) / nullif(lag(m.total_spend) over (
+                partition by m.department, m.category
+                order by m.spend_month
+            ), 0), 2
+        )                                            as mom_change_pct
+
+    from monthly m
+
+)
+
+select
+    department
+        || '_' || category
+        || '_' || to_char(spend_month, 'YYYY_MM')   as dept_category_month,
+    department,
+    category,
+    spend_month,
+    total_spend,
+    transaction_count,
+    avg_transaction,
+    policy_violation_cnt,
+    ai_flagged_cnt,
+    policy_violation_pct,
+    ai_flagged_pct,
+    prev_month_spend,
+    mom_change_usd,
+    mom_change_pct
+
+from with_mom
+order by department, category, spend_month
+  );
+  
+[0m21:02:51.420393 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:02:51.476151 [debug] [Thread-1 (]: SQL status: SELECT 150 in 0.056 seconds
+[0m21:02:51.490737 [debug] [Thread-1 (]: Using postgres connection "model.brex_spend_intelligence.spend_mart"
+[0m21:02:51.491749 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "model.brex_spend_intelligence.spend_mart"} */
+alter table "brex_spend"."mart_mart"."spend_mart__dbt_tmp" rename to "spend_mart"
+[0m21:02:51.495246 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m21:02:51.518417 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: COMMIT
+[0m21:02:51.518966 [debug] [Thread-1 (]: Using postgres connection "model.brex_spend_intelligence.spend_mart"
+[0m21:02:51.519393 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: COMMIT
+[0m21:02:51.522510 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m21:02:51.529545 [debug] [Thread-1 (]: Applying DROP to: "brex_spend"."mart_mart"."spend_mart__dbt_backup"
+[0m21:02:51.535426 [debug] [Thread-1 (]: Using postgres connection "model.brex_spend_intelligence.spend_mart"
+[0m21:02:51.535922 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "model.brex_spend_intelligence.spend_mart"} */
+drop table if exists "brex_spend"."mart_mart"."spend_mart__dbt_backup" cascade
+[0m21:02:51.537879 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m21:02:51.540821 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: Close
+[0m21:02:51.544649 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ed423bd8-1a05-4e64-a3d3-5e9ea685676a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f310f70>]}
+[0m21:02:51.545996 [info ] [Thread-1 (]: 1 of 1 OK created sql table model mart_mart.spend_mart ......................... [[32mSELECT 150[0m in 0.21s]
+[0m21:02:51.547301 [debug] [Thread-1 (]: Finished running node model.brex_spend_intelligence.spend_mart
+[0m21:02:51.549565 [debug] [MainThread]: On master: COMMIT
+[0m21:02:51.550216 [debug] [MainThread]: Using postgres connection "master"
+[0m21:02:51.550762 [debug] [MainThread]: On master: COMMIT
+[0m21:02:51.551324 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:02:51.569550 [debug] [MainThread]: SQL status: COMMIT in 0.018 seconds
+[0m21:02:51.570090 [debug] [MainThread]: On master: Close
+[0m21:02:51.570596 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:02:51.570918 [debug] [MainThread]: Connection 'model.brex_spend_intelligence.spend_mart' was properly closed.
+[0m21:02:51.571259 [info ] [MainThread]: 
+[0m21:02:51.571622 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.59 seconds (0.59s).
+[0m21:02:51.572396 [debug] [MainThread]: Command end result
+[0m21:02:51.627088 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m21:02:51.629588 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m21:02:51.647254 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/run_results.json
+[0m21:02:51.652724 [info ] [MainThread]: 
+[0m21:02:51.653267 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:02:51.653643 [info ] [MainThread]: 
+[0m21:02:51.654054 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m21:02:51.657603 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.5208397, "process_in_blocks": "0", "process_kernel_time": 0.732569, "process_mem_max_rss": "153083904", "process_out_blocks": "0", "process_user_time": 5.949734}
+[0m21:02:51.658161 [debug] [MainThread]: Command `dbt run` succeeded at 21:02:51.658035 after 3.52 seconds
+[0m21:02:51.658590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f38f750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f0f5400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ee97050>]}
+[0m21:02:51.659015 [debug] [MainThread]: Flushing usage events
+[0m21:02:52.559439 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:03:01.308311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11060c590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1114d39d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1114d3b10>]}
+
+
+============================== 21:03:01.316239 | e6cc24b2-4920-4fca-89dc-6447f5759b5c ==============================
+[0m21:03:01.316239 [info ] [MainThread]: Running with dbt=1.11.7
+[0m21:03:01.317354 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'invocation_command': 'dbt test --profiles-dir .', 'cache_selected_only': 'False', 'static_parser': 'True', 'log_format': 'default', 'warn_error': 'None', 'no_print': 'None', 'write_json': 'True', 'use_experimental_parser': 'False', 'log_path': '/Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/logs', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'profiles_dir': '.', 'debug': 'False', 'version_check': 'True', 'target_path': 'None'}
+[0m21:03:01.579845 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e6cc24b2-4920-4fca-89dc-6447f5759b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1107d8c30>]}
+[0m21:03:01.667570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e6cc24b2-4920-4fca-89dc-6447f5759b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11135ebe0>]}
+[0m21:03:01.668813 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m21:03:01.809733 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m21:03:01.986788 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:03:01.987210 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:03:01.987505 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:03:02.052587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e6cc24b2-4920-4fca-89dc-6447f5759b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111372d50>]}
+[0m21:03:02.185730 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m21:03:02.188463 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m21:03:02.230916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e6cc24b2-4920-4fca-89dc-6447f5759b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1121d4410>]}
+[0m21:03:02.231496 [info ] [MainThread]: Found 1 model, 6 data tests, 1 source, 464 macros
+[0m21:03:02.232044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e6cc24b2-4920-4fca-89dc-6447f5759b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1121ce190>]}
+[0m21:03:02.234497 [info ] [MainThread]: 
+[0m21:03:02.234882 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:03:02.235195 [info ] [MainThread]: 
+[0m21:03:02.235731 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:03:02.237074 [debug] [ThreadPool]: Acquiring new postgres connection 'list_brex_spend_mart_mart'
+[0m21:03:02.327508 [debug] [ThreadPool]: Using postgres connection "list_brex_spend_mart_mart"
+[0m21:03:02.338932 [debug] [ThreadPool]: On list_brex_spend_mart_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "list_brex_spend_mart_mart"} */
+select
+      'brex_spend' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'mart_mart'
+    union all
+    select
+      'brex_spend' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'mart_mart'
+    union all
+    select
+      'brex_spend' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'mart_mart'
+  
+[0m21:03:02.339677 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:03:02.408700 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.069 seconds
+[0m21:03:02.410364 [debug] [ThreadPool]: On list_brex_spend_mart_mart: ROLLBACK
+[0m21:03:02.412011 [debug] [ThreadPool]: On list_brex_spend_mart_mart: Close
+[0m21:03:02.416739 [debug] [MainThread]: Using postgres connection "master"
+[0m21:03:02.417247 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:03:02.417691 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:03:02.444325 [debug] [MainThread]: SQL status: SELECT 0 in 0.026 seconds
+[0m21:03:02.451113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e6cc24b2-4920-4fca-89dc-6447f5759b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11298d7e0>]}
+[0m21:03:02.451917 [debug] [MainThread]: On master: ROLLBACK
+[0m21:03:02.453907 [debug] [MainThread]: On master: COMMIT
+[0m21:03:02.454369 [debug] [MainThread]: Using postgres connection "master"
+[0m21:03:02.454735 [debug] [MainThread]: On master: COMMIT
+[0m21:03:02.457458 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m21:03:02.457896 [debug] [MainThread]: On master: Close
+[0m21:03:02.461086 [debug] [Thread-1 (]: Began running node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m21:03:02.461595 [debug] [Thread-2 (]: Began running node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m21:03:02.462052 [debug] [Thread-4 (]: Began running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m21:03:02.462525 [debug] [Thread-3 (]: Began running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m21:03:02.463053 [info ] [Thread-1 (]: 1 of 6 START test not_null_spend_mart_dept_category_month ...................... [RUN]
+[0m21:03:02.463597 [info ] [Thread-2 (]: 2 of 6 START test source_not_null_raw_transactions_amount_usd .................. [RUN]
+[0m21:03:02.464100 [info ] [Thread-4 (]: 4 of 6 START test source_not_null_raw_transactions_transaction_id .............. [RUN]
+[0m21:03:02.464593 [info ] [Thread-3 (]: 3 of 6 START test source_not_null_raw_transactions_transaction_date ............ [RUN]
+[0m21:03:02.465144 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_brex_spend_mart_mart, now test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0)
+[0m21:03:02.465723 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd'
+[0m21:03:02.466266 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047'
+[0m21:03:02.466812 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a'
+[0m21:03:02.467252 [debug] [Thread-1 (]: Began compiling node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m21:03:02.467707 [debug] [Thread-2 (]: Began compiling node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m21:03:02.468115 [debug] [Thread-4 (]: Began compiling node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m21:03:02.468547 [debug] [Thread-3 (]: Began compiling node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m21:03:02.491664 [debug] [Thread-1 (]: Writing injected SQL for node "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"
+[0m21:03:02.491222 [debug] [Thread-2 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"
+[0m21:03:02.502124 [debug] [Thread-4 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"
+[0m21:03:02.506953 [debug] [Thread-3 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"
+[0m21:03:02.508579 [debug] [Thread-3 (]: Began executing node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m21:03:02.509104 [debug] [Thread-4 (]: Began executing node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m21:03:02.509567 [debug] [Thread-2 (]: Began executing node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m21:03:02.510025 [debug] [Thread-1 (]: Began executing node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m21:03:02.542843 [debug] [Thread-3 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"
+[0m21:03:02.553844 [debug] [Thread-2 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"
+[0m21:03:02.563319 [debug] [Thread-4 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"
+[0m21:03:02.565954 [debug] [Thread-1 (]: Writing runtime sql for node "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"
+[0m21:03:02.567426 [debug] [Thread-4 (]: Using postgres connection "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"
+[0m21:03:02.567946 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from "brex_spend"."raw"."transactions"
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:03:02.568513 [debug] [Thread-2 (]: Using postgres connection "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"
+[0m21:03:02.569031 [debug] [Thread-3 (]: Using postgres connection "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"
+[0m21:03:02.569546 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m21:03:02.570096 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount_usd
+from "brex_spend"."raw"."transactions"
+where amount_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:03:02.570609 [debug] [Thread-1 (]: Using postgres connection "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"
+[0m21:03:02.571076 [debug] [Thread-3 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_date
+from "brex_spend"."raw"."transactions"
+where transaction_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:03:02.571689 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m21:03:02.572191 [debug] [Thread-1 (]: On test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select dept_category_month
+from "brex_spend"."mart_mart"."spend_mart"
+where dept_category_month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:03:02.572657 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:03:02.573239 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:03:02.596910 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.027 seconds
+[0m21:03:02.604280 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047: ROLLBACK
+[0m21:03:02.604848 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.033 seconds
+[0m21:03:02.605264 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.033 seconds
+[0m21:03:02.605678 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.032 seconds
+[0m21:03:02.607350 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd: ROLLBACK
+[0m21:03:02.607795 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047: Close
+[0m21:03:02.609320 [debug] [Thread-3 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a: ROLLBACK
+[0m21:03:02.610849 [debug] [Thread-1 (]: On test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0: ROLLBACK
+[0m21:03:02.611655 [info ] [Thread-4 (]: 4 of 6 PASS source_not_null_raw_transactions_transaction_id .................... [[32mPASS[0m in 0.15s]
+[0m21:03:02.612821 [debug] [Thread-4 (]: Finished running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m21:03:02.613394 [debug] [Thread-3 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a: Close
+[0m21:03:02.613881 [debug] [Thread-4 (]: Began running node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m21:03:02.614275 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd: Close
+[0m21:03:02.614683 [debug] [Thread-1 (]: On test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0: Close
+[0m21:03:02.615443 [info ] [Thread-3 (]: 3 of 6 PASS source_not_null_raw_transactions_transaction_date .................. [[32mPASS[0m in 0.15s]
+[0m21:03:02.615843 [info ] [Thread-4 (]: 5 of 6 START test source_unique_raw_transactions_transaction_id ................ [RUN]
+[0m21:03:02.616680 [info ] [Thread-2 (]: 2 of 6 PASS source_not_null_raw_transactions_amount_usd ........................ [[32mPASS[0m in 0.15s]
+[0m21:03:02.617988 [debug] [Thread-3 (]: Finished running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m21:03:02.617391 [info ] [Thread-1 (]: 1 of 6 PASS not_null_spend_mart_dept_category_month ............................ [[32mPASS[0m in 0.15s]
+[0m21:03:02.618575 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047, now test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63)
+[0m21:03:02.619238 [debug] [Thread-2 (]: Finished running node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m21:03:02.619713 [debug] [Thread-3 (]: Began running node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m21:03:02.620424 [debug] [Thread-1 (]: Finished running node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m21:03:02.620865 [debug] [Thread-4 (]: Began compiling node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m21:03:02.621427 [info ] [Thread-3 (]: 6 of 6 START test unique_spend_mart_dept_category_month ........................ [RUN]
+[0m21:03:02.627606 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a, now test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145)
+[0m21:03:02.628096 [debug] [Thread-3 (]: Began compiling node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m21:03:02.633520 [debug] [Thread-3 (]: Writing injected SQL for node "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"
+[0m21:03:02.634548 [debug] [Thread-4 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"
+[0m21:03:02.635374 [debug] [Thread-3 (]: Began executing node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m21:03:02.637536 [debug] [Thread-3 (]: Writing runtime sql for node "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"
+[0m21:03:02.637959 [debug] [Thread-4 (]: Began executing node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m21:03:02.640549 [debug] [Thread-4 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"
+[0m21:03:02.641757 [debug] [Thread-3 (]: Using postgres connection "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"
+[0m21:03:02.642632 [debug] [Thread-3 (]: On test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    dept_category_month as unique_field,
+    count(*) as n_records
+
+from "brex_spend"."mart_mart"."spend_mart"
+where dept_category_month is not null
+group by dept_category_month
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:03:02.643510 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m21:03:02.644657 [debug] [Thread-4 (]: Using postgres connection "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"
+[0m21:03:02.645448 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "brex_spend"."raw"."transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:03:02.646181 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m21:03:02.672998 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.029 seconds
+[0m21:03:02.674929 [debug] [Thread-3 (]: On test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145: ROLLBACK
+[0m21:03:02.676851 [debug] [Thread-3 (]: On test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145: Close
+[0m21:03:02.677444 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.031 seconds
+[0m21:03:02.680278 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63: ROLLBACK
+[0m21:03:02.678335 [info ] [Thread-3 (]: 6 of 6 PASS unique_spend_mart_dept_category_month .............................. [[32mPASS[0m in 0.05s]
+[0m21:03:02.681478 [debug] [Thread-3 (]: Finished running node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m21:03:02.682541 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63: Close
+[0m21:03:02.683358 [info ] [Thread-4 (]: 5 of 6 PASS source_unique_raw_transactions_transaction_id ...................... [[32mPASS[0m in 0.06s]
+[0m21:03:02.684160 [debug] [Thread-4 (]: Finished running node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m21:03:02.685722 [debug] [MainThread]: On master: COMMIT
+[0m21:03:02.686149 [debug] [MainThread]: Using postgres connection "master"
+[0m21:03:02.686525 [debug] [MainThread]: On master: COMMIT
+[0m21:03:02.686885 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:03:02.713222 [debug] [MainThread]: SQL status: COMMIT in 0.026 seconds
+[0m21:03:02.713734 [debug] [MainThread]: On master: Close
+[0m21:03:02.714252 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:03:02.714611 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0' was properly closed.
+[0m21:03:02.714961 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd' was properly closed.
+[0m21:03:02.715297 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63' was properly closed.
+[0m21:03:02.715724 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145' was properly closed.
+[0m21:03:02.716116 [info ] [MainThread]: 
+[0m21:03:02.716539 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 0.48 seconds (0.48s).
+[0m21:03:02.718519 [debug] [MainThread]: Command end result
+[0m21:03:02.889264 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m21:03:02.892325 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m21:03:02.906494 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/run_results.json
+[0m21:03:02.906951 [info ] [MainThread]: 
+[0m21:03:02.907431 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:03:02.907870 [info ] [MainThread]: 
+[0m21:03:02.908330 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m21:03:02.912210 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.7177526, "process_in_blocks": "0", "process_kernel_time": 0.60677, "process_mem_max_rss": "149180416", "process_out_blocks": "0", "process_user_time": 4.522783}
+[0m21:03:02.912815 [debug] [MainThread]: Command `dbt test` succeeded at 21:03:02.912672 after 1.72 seconds
+[0m21:03:02.913297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1112b2e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11213d390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112b4c3c0>]}
+[0m21:03:02.913756 [debug] [MainThread]: Flushing usage events
+[0m21:03:03.301891 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:07:25.992984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082f8590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091cb9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091cbb10>]}
+
+
+============================== 21:07:26.000050 | 1993a55c-c89f-45cf-80ed-677f236f3d00 ==============================
+[0m21:07:26.000050 [info ] [MainThread]: Running with dbt=1.11.7
+[0m21:07:26.000833 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'printer_width': '80', 'quiet': 'False', 'version_check': 'True', 'warn_error': 'None', 'invocation_command': 'dbt test --profiles-dir .', 'introspect': 'True', 'log_path': '/Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/logs', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'empty': 'None', 'target_path': 'None', 'no_print': 'None', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'profiles_dir': '.'}
+[0m21:07:26.332192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1993a55c-c89f-45cf-80ed-677f236f3d00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084c8c30>]}
+[0m21:07:26.416700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1993a55c-c89f-45cf-80ed-677f236f3d00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10904ebe0>]}
+[0m21:07:26.418108 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m21:07:26.563192 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m21:07:26.760947 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:07:26.761324 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:07:26.761632 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:07:26.817251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1993a55c-c89f-45cf-80ed-677f236f3d00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109062d50>]}
+[0m21:07:26.937506 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m21:07:26.940188 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m21:07:26.982289 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1993a55c-c89f-45cf-80ed-677f236f3d00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a284410>]}
+[0m21:07:26.983057 [info ] [MainThread]: Found 1 model, 6 data tests, 1 source, 464 macros
+[0m21:07:26.983526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1993a55c-c89f-45cf-80ed-677f236f3d00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a27e190>]}
+[0m21:07:26.986755 [info ] [MainThread]: 
+[0m21:07:26.987152 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:07:26.987550 [info ] [MainThread]: 
+[0m21:07:26.988037 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:07:26.988883 [debug] [ThreadPool]: Acquiring new postgres connection 'list_brex_spend_mart_mart'
+[0m21:07:27.079680 [debug] [ThreadPool]: Using postgres connection "list_brex_spend_mart_mart"
+[0m21:07:27.080243 [debug] [ThreadPool]: On list_brex_spend_mart_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "list_brex_spend_mart_mart"} */
+select
+      'brex_spend' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'mart_mart'
+    union all
+    select
+      'brex_spend' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'mart_mart'
+    union all
+    select
+      'brex_spend' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'mart_mart'
+  
+[0m21:07:27.080656 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:07:27.187345 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.107 seconds
+[0m21:07:27.189044 [debug] [ThreadPool]: On list_brex_spend_mart_mart: ROLLBACK
+[0m21:07:27.191652 [debug] [ThreadPool]: On list_brex_spend_mart_mart: Close
+[0m21:07:27.196473 [debug] [MainThread]: Using postgres connection "master"
+[0m21:07:27.197010 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:07:27.197509 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:07:27.229670 [debug] [MainThread]: SQL status: SELECT 0 in 0.032 seconds
+[0m21:07:27.231163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1993a55c-c89f-45cf-80ed-677f236f3d00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a4a97e0>]}
+[0m21:07:27.231716 [debug] [MainThread]: On master: ROLLBACK
+[0m21:07:27.233716 [debug] [MainThread]: On master: COMMIT
+[0m21:07:27.234362 [debug] [MainThread]: Using postgres connection "master"
+[0m21:07:27.234776 [debug] [MainThread]: On master: COMMIT
+[0m21:07:27.237331 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m21:07:27.237739 [debug] [MainThread]: On master: Close
+[0m21:07:27.241302 [debug] [Thread-3 (]: Began running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m21:07:27.241830 [debug] [Thread-1 (]: Began running node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m21:07:27.242258 [debug] [Thread-4 (]: Began running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m21:07:27.242679 [debug] [Thread-2 (]: Began running node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m21:07:27.243126 [info ] [Thread-3 (]: 3 of 6 START test source_not_null_raw_transactions_transaction_date ............ [RUN]
+[0m21:07:27.243617 [info ] [Thread-1 (]: 1 of 6 START test not_null_spend_mart_dept_category_month ...................... [RUN]
+[0m21:07:27.244092 [info ] [Thread-4 (]: 4 of 6 START test source_not_null_raw_transactions_transaction_id .............. [RUN]
+[0m21:07:27.244553 [info ] [Thread-2 (]: 2 of 6 START test source_not_null_raw_transactions_amount_usd .................. [RUN]
+[0m21:07:27.245177 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a'
+[0m21:07:27.245665 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_brex_spend_mart_mart, now test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0)
+[0m21:07:27.246201 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047'
+[0m21:07:27.246724 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd'
+[0m21:07:27.247167 [debug] [Thread-3 (]: Began compiling node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m21:07:27.247594 [debug] [Thread-1 (]: Began compiling node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m21:07:27.248004 [debug] [Thread-4 (]: Began compiling node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m21:07:27.248433 [debug] [Thread-2 (]: Began compiling node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m21:07:27.273583 [debug] [Thread-3 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"
+[0m21:07:27.276539 [debug] [Thread-1 (]: Writing injected SQL for node "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"
+[0m21:07:27.283618 [debug] [Thread-4 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"
+[0m21:07:27.289097 [debug] [Thread-2 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"
+[0m21:07:27.291646 [debug] [Thread-4 (]: Began executing node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m21:07:27.297766 [debug] [Thread-3 (]: Began executing node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m21:07:27.298332 [debug] [Thread-1 (]: Began executing node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m21:07:27.304830 [debug] [Thread-2 (]: Began executing node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m21:07:27.341786 [debug] [Thread-3 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"
+[0m21:07:27.343469 [debug] [Thread-4 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"
+[0m21:07:27.344036 [debug] [Thread-1 (]: Writing runtime sql for node "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"
+[0m21:07:27.346595 [debug] [Thread-2 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"
+[0m21:07:27.347980 [debug] [Thread-3 (]: Using postgres connection "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"
+[0m21:07:27.348433 [debug] [Thread-3 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_date
+from "brex_spend"."raw"."transactions"
+where transaction_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:07:27.348883 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:07:27.349485 [debug] [Thread-4 (]: Using postgres connection "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"
+[0m21:07:27.349987 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from "brex_spend"."raw"."transactions"
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:07:27.350421 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m21:07:27.351197 [debug] [Thread-1 (]: Using postgres connection "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"
+[0m21:07:27.351703 [debug] [Thread-2 (]: Using postgres connection "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"
+[0m21:07:27.352152 [debug] [Thread-1 (]: On test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select dept_category_month
+from "brex_spend"."mart_mart"."spend_mart"
+where dept_category_month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:07:27.352640 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount_usd
+from "brex_spend"."raw"."transactions"
+where amount_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:07:27.353118 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:07:27.353539 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m21:07:27.373427 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.024 seconds
+[0m21:07:27.374288 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.021 seconds
+[0m21:07:27.375107 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.025 seconds
+[0m21:07:27.381007 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.027 seconds
+[0m21:07:27.384435 [debug] [Thread-3 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a: ROLLBACK
+[0m21:07:27.386580 [debug] [Thread-1 (]: On test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0: ROLLBACK
+[0m21:07:27.388113 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047: ROLLBACK
+[0m21:07:27.389571 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd: ROLLBACK
+[0m21:07:27.391612 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047: Close
+[0m21:07:27.392090 [debug] [Thread-1 (]: On test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0: Close
+[0m21:07:27.393228 [debug] [Thread-3 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a: Close
+[0m21:07:27.393618 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd: Close
+[0m21:07:27.392857 [info ] [Thread-4 (]: 4 of 6 PASS source_not_null_raw_transactions_transaction_id .................... [[32mPASS[0m in 0.15s]
+[0m21:07:27.394339 [info ] [Thread-1 (]: 1 of 6 PASS not_null_spend_mart_dept_category_month ............................ [[32mPASS[0m in 0.15s]
+[0m21:07:27.394974 [info ] [Thread-3 (]: 3 of 6 PASS source_not_null_raw_transactions_transaction_date .................. [[32mPASS[0m in 0.15s]
+[0m21:07:27.396417 [debug] [Thread-4 (]: Finished running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m21:07:27.395767 [info ] [Thread-2 (]: 2 of 6 PASS source_not_null_raw_transactions_amount_usd ........................ [[32mPASS[0m in 0.15s]
+[0m21:07:27.397163 [debug] [Thread-1 (]: Finished running node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m21:07:27.397816 [debug] [Thread-3 (]: Finished running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m21:07:27.398341 [debug] [Thread-4 (]: Began running node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m21:07:27.399142 [debug] [Thread-2 (]: Finished running node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m21:07:27.399671 [debug] [Thread-1 (]: Began running node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m21:07:27.400285 [info ] [Thread-4 (]: 5 of 6 START test source_unique_raw_transactions_transaction_id ................ [RUN]
+[0m21:07:27.400887 [info ] [Thread-1 (]: 6 of 6 START test unique_spend_mart_dept_category_month ........................ [RUN]
+[0m21:07:27.401406 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047, now test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63)
+[0m21:07:27.401866 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0, now test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145)
+[0m21:07:27.402303 [debug] [Thread-4 (]: Began compiling node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m21:07:27.402722 [debug] [Thread-1 (]: Began compiling node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m21:07:27.409260 [debug] [Thread-4 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"
+[0m21:07:27.413427 [debug] [Thread-1 (]: Writing injected SQL for node "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"
+[0m21:07:27.414321 [debug] [Thread-4 (]: Began executing node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m21:07:27.414743 [debug] [Thread-1 (]: Began executing node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m21:07:27.417024 [debug] [Thread-4 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"
+[0m21:07:27.419193 [debug] [Thread-1 (]: Writing runtime sql for node "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"
+[0m21:07:27.420084 [debug] [Thread-1 (]: Using postgres connection "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"
+[0m21:07:27.420561 [debug] [Thread-1 (]: On test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    dept_category_month as unique_field,
+    count(*) as n_records
+
+from "brex_spend"."mart_mart"."spend_mart"
+where dept_category_month is not null
+group by dept_category_month
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:07:27.420992 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:07:27.421432 [debug] [Thread-4 (]: Using postgres connection "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"
+[0m21:07:27.421969 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "brex_spend"."raw"."transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:07:27.422417 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m21:07:27.450617 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.030 seconds
+[0m21:07:27.452544 [debug] [Thread-1 (]: On test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145: ROLLBACK
+[0m21:07:27.454246 [debug] [Thread-1 (]: On test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145: Close
+[0m21:07:27.455062 [info ] [Thread-1 (]: 6 of 6 PASS unique_spend_mart_dept_category_month .............................. [[32mPASS[0m in 0.05s]
+[0m21:07:27.455646 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.033 seconds
+[0m21:07:27.456361 [debug] [Thread-1 (]: Finished running node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m21:07:27.458203 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63: ROLLBACK
+[0m21:07:27.460145 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63: Close
+[0m21:07:27.461096 [info ] [Thread-4 (]: 5 of 6 PASS source_unique_raw_transactions_transaction_id ...................... [[32mPASS[0m in 0.06s]
+[0m21:07:27.461977 [debug] [Thread-4 (]: Finished running node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m21:07:27.463816 [debug] [MainThread]: On master: COMMIT
+[0m21:07:27.464315 [debug] [MainThread]: Using postgres connection "master"
+[0m21:07:27.464708 [debug] [MainThread]: On master: COMMIT
+[0m21:07:27.465103 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:07:27.490675 [debug] [MainThread]: SQL status: COMMIT in 0.026 seconds
+[0m21:07:27.491203 [debug] [MainThread]: On master: Close
+[0m21:07:27.491753 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:07:27.492124 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145' was properly closed.
+[0m21:07:27.492475 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a' was properly closed.
+[0m21:07:27.492820 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63' was properly closed.
+[0m21:07:27.493167 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd' was properly closed.
+[0m21:07:27.493569 [info ] [MainThread]: 
+[0m21:07:27.494018 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 0.51 seconds (0.51s).
+[0m21:07:27.495935 [debug] [MainThread]: Command end result
+[0m21:07:27.676048 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m21:07:27.679065 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m21:07:27.688888 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/run_results.json
+[0m21:07:27.689330 [info ] [MainThread]: 
+[0m21:07:27.689833 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:07:27.690264 [info ] [MainThread]: 
+[0m21:07:27.690736 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m21:07:27.694577 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.8176847, "process_in_blocks": "0", "process_kernel_time": 0.664326, "process_mem_max_rss": "149626880", "process_out_blocks": "0", "process_user_time": 4.432526}
+[0m21:07:27.695249 [debug] [MainThread]: Command `dbt test` succeeded at 21:07:27.695100 after 1.82 seconds
+[0m21:07:27.695742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f9ee10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a1f9390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a668ec0>]}
+[0m21:07:27.696217 [debug] [MainThread]: Flushing usage events
+[0m21:07:28.239977 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:51:10.547320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf3eba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d703610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7034d0>]}
+
+
+============================== 10:51:10.554378 | cce8ccd5-e5cf-44ee-9298-56a0ee05d354 ==============================
+[0m10:51:10.554378 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:51:10.555056 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run --profiles-dir .', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'write_json': 'True', 'fail_fast': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'no_print': 'None', 'static_parser': 'True', 'indirect_selection': 'eager', 'printer_width': '80', 'introspect': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'profiles_dir': '.', 'log_path': '/Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/logs', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'log_cache_events': 'False', 'version_check': 'True', 'quiet': 'False'}
+[0m10:51:10.830169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cce8ccd5-e5cf-44ee-9298-56a0ee05d354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c9fc770>]}
+[0m10:51:10.942003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cce8ccd5-e5cf-44ee-9298-56a0ee05d354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3768b0>]}
+[0m10:51:10.942918 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m10:51:11.063262 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m10:51:11.196145 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m10:51:11.196747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'cce8ccd5-e5cf-44ee-9298-56a0ee05d354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e579650>]}
+[0m10:51:12.813780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cce8ccd5-e5cf-44ee-9298-56a0ee05d354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d842f30>]}
+[0m10:51:12.910555 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m10:51:12.912523 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m10:51:12.931056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cce8ccd5-e5cf-44ee-9298-56a0ee05d354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ebd8750>]}
+[0m10:51:12.931586 [info ] [MainThread]: Found 1 model, 6 data tests, 1 source, 464 macros
+[0m10:51:12.932007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cce8ccd5-e5cf-44ee-9298-56a0ee05d354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e5db790>]}
+[0m10:51:12.934179 [info ] [MainThread]: 
+[0m10:51:12.934576 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:51:12.934936 [info ] [MainThread]: 
+[0m10:51:12.935465 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:51:12.936328 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m10:51:13.000801 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m10:51:13.001273 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:51:13.001629 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:51:13.997222 [debug] [ThreadPool]: SQL status: SELECT 13 in 0.995 seconds
+[0m10:51:13.999428 [debug] [ThreadPool]: On list_postgres: Close
+[0m10:51:14.000804 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now create_postgres_mart_mart)
+[0m10:51:14.001822 [debug] [ThreadPool]: Creating schema "database: "postgres"
+schema: "mart_mart"
+"
+[0m10:51:14.008448 [debug] [ThreadPool]: Using postgres connection "create_postgres_mart_mart"
+[0m10:51:14.008960 [debug] [ThreadPool]: On create_postgres_mart_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "create_postgres_mart_mart"} */
+create schema if not exists "mart_mart"
+[0m10:51:14.009355 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:51:14.882334 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.873 seconds
+[0m10:51:14.883432 [debug] [ThreadPool]: On create_postgres_mart_mart: COMMIT
+[0m10:51:14.883793 [debug] [ThreadPool]: Using postgres connection "create_postgres_mart_mart"
+[0m10:51:14.884120 [debug] [ThreadPool]: On create_postgres_mart_mart: COMMIT
+[0m10:51:14.963845 [debug] [ThreadPool]: SQL status: COMMIT in 0.079 seconds
+[0m10:51:14.964484 [debug] [ThreadPool]: On create_postgres_mart_mart: Close
+[0m10:51:14.968373 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_postgres_mart_mart, now list_postgres_mart_mart)
+[0m10:51:14.975431 [debug] [ThreadPool]: Using postgres connection "list_postgres_mart_mart"
+[0m10:51:14.975950 [debug] [ThreadPool]: On list_postgres_mart_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "list_postgres_mart_mart"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'mart_mart'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'mart_mart'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'mart_mart'
+  
+[0m10:51:14.976374 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:51:15.798490 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.822 seconds
+[0m10:51:15.800530 [debug] [ThreadPool]: On list_postgres_mart_mart: ROLLBACK
+[0m10:51:15.925767 [debug] [ThreadPool]: On list_postgres_mart_mart: Close
+[0m10:51:15.932844 [debug] [MainThread]: Using postgres connection "master"
+[0m10:51:15.933550 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:51:15.934113 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:51:16.845183 [debug] [MainThread]: SQL status: SELECT 1 in 0.911 seconds
+[0m10:51:16.847172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cce8ccd5-e5cf-44ee-9298-56a0ee05d354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10edec890>]}
+[0m10:51:16.847852 [debug] [MainThread]: On master: ROLLBACK
+[0m10:51:16.977533 [debug] [MainThread]: On master: COMMIT
+[0m10:51:16.978165 [debug] [MainThread]: Using postgres connection "master"
+[0m10:51:16.978639 [debug] [MainThread]: On master: COMMIT
+[0m10:51:17.144009 [debug] [MainThread]: SQL status: COMMIT in 0.165 seconds
+[0m10:51:17.144550 [debug] [MainThread]: On master: Close
+[0m10:51:17.148938 [debug] [Thread-1 (]: Began running node model.brex_spend_intelligence.spend_mart
+[0m10:51:17.149628 [info ] [Thread-1 (]: 1 of 1 START sql table model mart_mart.spend_mart .............................. [RUN]
+[0m10:51:17.150265 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_mart_mart, now model.brex_spend_intelligence.spend_mart)
+[0m10:51:17.150795 [debug] [Thread-1 (]: Began compiling node model.brex_spend_intelligence.spend_mart
+[0m10:51:17.161619 [debug] [Thread-1 (]: Writing injected SQL for node "model.brex_spend_intelligence.spend_mart"
+[0m10:51:17.163411 [debug] [Thread-1 (]: Began executing node model.brex_spend_intelligence.spend_mart
+[0m10:51:17.213812 [debug] [Thread-1 (]: Writing runtime sql for node "model.brex_spend_intelligence.spend_mart"
+[0m10:51:17.214896 [debug] [Thread-1 (]: Using postgres connection "model.brex_spend_intelligence.spend_mart"
+[0m10:51:17.215572 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "model.brex_spend_intelligence.spend_mart"} */
+
+  
+    
+
+  create  table "postgres"."mart_mart"."spend_mart__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+/*
+  spend_mart.sql
+  ──────────────
+  Aggregates raw.transactions by department, category, and month.
+  Adds month-over-month (MoM) spend change and AI/policy violation rates.
+
+  Columns produced:
+    dept_category_month   Surrogate grain key
+    department
+    category
+    spend_month           First day of the month (DATE)
+    total_spend           Sum of amount_usd
+    transaction_count
+    avg_transaction       Average spend per transaction
+    policy_violation_cnt  Rule-based violations from generate_data.py
+    ai_flagged_cnt        Violations flagged by Claude
+    policy_violation_pct  % of transactions that violated policy
+    ai_flagged_pct        % of transactions AI-flagged
+    prev_month_spend      Spend in the prior calendar month
+    mom_change_usd        Absolute MoM change
+    mom_change_pct        Relative MoM change (NULL for first month in window)
+*/
+
+with
+
+base as (
+
+    select
+        department,
+        category,
+        date_trunc('month', transaction_date)::date as spend_month,
+        amount_usd,
+        policy_violation,
+        coalesce(ai_flagged, false)                 as ai_flagged
+
+    from "postgres"."raw"."transactions"
+    where transaction_date is not null
+
+),
+
+monthly as (
+
+    select
+        department,
+        category,
+        spend_month,
+
+        round(sum(amount_usd)::numeric, 2)          as total_spend,
+        count(*)                                     as transaction_count,
+        round(avg(amount_usd)::numeric, 2)           as avg_transaction,
+
+        sum(case when policy_violation then 1 else 0 end)
+                                                     as policy_violation_cnt,
+        sum(case when ai_flagged       then 1 else 0 end)
+                                                     as ai_flagged_cnt,
+
+        round(
+            100.0 * sum(case when policy_violation then 1 else 0 end)
+            / nullif(count(*), 0), 2
+        )                                            as policy_violation_pct,
+
+        round(
+            100.0 * sum(case when ai_flagged then 1 else 0 end)
+            / nullif(count(*), 0), 2
+        )                                            as ai_flagged_pct
+
+    from base
+    group by 1, 2, 3
+
+),
+
+with_mom as (
+
+    select
+        m.*,
+
+        lag(m.total_spend) over (
+            partition by m.department, m.category
+            order by m.spend_month
+        )                                            as prev_month_spend,
+
+        round(
+            m.total_spend - lag(m.total_spend) over (
+                partition by m.department, m.category
+                order by m.spend_month
+            ), 2
+        )                                            as mom_change_usd,
+
+        round(
+            100.0 * (
+                m.total_spend - lag(m.total_spend) over (
+                    partition by m.department, m.category
+                    order by m.spend_month
+                )
+            ) / nullif(lag(m.total_spend) over (
+                partition by m.department, m.category
+                order by m.spend_month
+            ), 0), 2
+        )                                            as mom_change_pct
+
+    from monthly m
+
+)
+
+select
+    department
+        || '_' || category
+        || '_' || to_char(spend_month, 'YYYY_MM')   as dept_category_month,
+    department,
+    category,
+    spend_month,
+    total_spend,
+    transaction_count,
+    avg_transaction,
+    policy_violation_cnt,
+    ai_flagged_cnt,
+    policy_violation_pct,
+    ai_flagged_pct,
+    prev_month_spend,
+    mom_change_usd,
+    mom_change_pct
+
+from with_mom
+order by department, category, spend_month
+  );
+  
+[0m10:51:17.216338 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:51:18.108338 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column "ai_flagged" does not exist
+LINE 47:         coalesce(ai_flagged, false)                 as ai_fl...
+                          ^
+
+[0m10:51:18.109053 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: ROLLBACK
+[0m10:51:18.186611 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: Close
+[0m10:51:18.198167 [debug] [Thread-1 (]: Database Error in model spend_mart (models/spend_mart.sql)
+  column "ai_flagged" does not exist
+  LINE 47:         coalesce(ai_flagged, false)                 as ai_fl...
+                            ^
+  compiled code at target/run/brex_spend_intelligence/models/spend_mart.sql
+[0m10:51:18.200374 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce8ccd5-e5cf-44ee-9298-56a0ee05d354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10efbc470>]}
+[0m10:51:18.201246 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model mart_mart.spend_mart ..................... [[31mERROR[0m in 1.05s]
+[0m10:51:18.202144 [debug] [Thread-1 (]: Finished running node model.brex_spend_intelligence.spend_mart
+[0m10:51:18.202945 [debug] [Thread-7 (]: Marking all children of 'model.brex_spend_intelligence.spend_mart' to be skipped because of status 'error'.  Reason: Database Error in model spend_mart (models/spend_mart.sql)
+  column "ai_flagged" does not exist
+  LINE 47:         coalesce(ai_flagged, false)                 as ai_fl...
+                            ^
+  compiled code at target/run/brex_spend_intelligence/models/spend_mart.sql.
+[0m10:51:18.205319 [debug] [MainThread]: On master: COMMIT
+[0m10:51:18.205797 [debug] [MainThread]: Using postgres connection "master"
+[0m10:51:18.206185 [debug] [MainThread]: On master: COMMIT
+[0m10:51:18.206555 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:51:19.151944 [debug] [MainThread]: SQL status: COMMIT in 0.945 seconds
+[0m10:51:19.152439 [debug] [MainThread]: On master: Close
+[0m10:51:19.153265 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:51:19.153632 [debug] [MainThread]: Connection 'model.brex_spend_intelligence.spend_mart' was properly closed.
+[0m10:51:19.153998 [info ] [MainThread]: 
+[0m10:51:19.154414 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 6.22 seconds (6.22s).
+[0m10:51:19.155221 [debug] [MainThread]: Command end result
+[0m10:51:19.181550 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m10:51:19.183589 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m10:51:19.190570 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/run_results.json
+[0m10:51:19.190970 [info ] [MainThread]: 
+[0m10:51:19.191385 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m10:51:19.191744 [info ] [MainThread]: 
+[0m10:51:19.192181 [error] [MainThread]: [31mFailure in model spend_mart (models/spend_mart.sql)[0m
+[0m10:51:19.192681 [error] [MainThread]:   Database Error in model spend_mart (models/spend_mart.sql)
+  column "ai_flagged" does not exist
+  LINE 47:         coalesce(ai_flagged, false)                 as ai_fl...
+                            ^
+  compiled code at target/run/brex_spend_intelligence/models/spend_mart.sql
+[0m10:51:19.193038 [info ] [MainThread]: 
+[0m10:51:19.193445 [info ] [MainThread]:   compiled code at target/compiled/brex_spend_intelligence/models/spend_mart.sql
+[0m10:51:19.193788 [info ] [MainThread]: 
+[0m10:51:19.194170 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:51:19.199289 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 8.780595, "process_in_blocks": "0", "process_kernel_time": 0.476468, "process_mem_max_rss": "142536704", "process_out_blocks": "0", "process_user_time": 4.311486}
+[0m10:51:19.200812 [debug] [MainThread]: Command `dbt run` failed at 10:51:19.200520 after 8.78 seconds
+[0m10:51:19.201488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ee9ac10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ef9cef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bef61d0>]}
+[0m10:51:19.201996 [debug] [MainThread]: Flushing usage events
+[0m10:51:19.894646 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:51:22.259024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0eeba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b8b3610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b8b34d0>]}
+
+
+============================== 10:51:22.264267 | dd72c433-6ce8-44f3-86f0-ef8458764bdf ==============================
+[0m10:51:22.264267 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:51:22.264952 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'version_check': 'True', 'invocation_command': 'dbt test --profiles-dir .', 'warn_error': 'None', 'partial_parse': 'True', 'empty': 'None', 'introspect': 'True', 'log_path': '/Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/logs', 'debug': 'False', 'write_json': 'True', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'static_parser': 'True', 'no_print': 'None', 'indirect_selection': 'eager', 'quiet': 'False'}
+[0m10:51:22.503892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dd72c433-6ce8-44f3-86f0-ef8458764bdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10abac770>]}
+[0m10:51:22.602686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dd72c433-6ce8-44f3-86f0-ef8458764bdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095268b0>]}
+[0m10:51:22.603750 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m10:51:22.720737 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m10:51:22.872575 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:51:22.873032 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m10:51:22.873351 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:51:22.930957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dd72c433-6ce8-44f3-86f0-ef8458764bdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b81ba50>]}
+[0m10:51:23.035195 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m10:51:23.037458 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m10:51:23.065228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dd72c433-6ce8-44f3-86f0-ef8458764bdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c905c70>]}
+[0m10:51:23.065740 [info ] [MainThread]: Found 1 model, 6 data tests, 1 source, 464 macros
+[0m10:51:23.066126 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd72c433-6ce8-44f3-86f0-ef8458764bdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c9034d0>]}
+[0m10:51:23.068554 [info ] [MainThread]: 
+[0m10:51:23.068953 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:51:23.069288 [info ] [MainThread]: 
+[0m10:51:23.069877 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:51:23.070852 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_mart_mart'
+[0m10:51:23.202605 [debug] [ThreadPool]: Using postgres connection "list_postgres_mart_mart"
+[0m10:51:23.203153 [debug] [ThreadPool]: On list_postgres_mart_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "list_postgres_mart_mart"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'mart_mart'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'mart_mart'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'mart_mart'
+  
+[0m10:51:23.203604 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:51:24.317039 [debug] [ThreadPool]: SQL status: SELECT 0 in 1.113 seconds
+[0m10:51:24.319416 [debug] [ThreadPool]: On list_postgres_mart_mart: ROLLBACK
+[0m10:51:24.544951 [debug] [ThreadPool]: On list_postgres_mart_mart: Close
+[0m10:51:24.552013 [debug] [MainThread]: Using postgres connection "master"
+[0m10:51:24.552598 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:51:24.553121 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:51:25.708389 [debug] [MainThread]: SQL status: SELECT 1 in 1.155 seconds
+[0m10:51:25.710372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd72c433-6ce8-44f3-86f0-ef8458764bdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ca2bd40>]}
+[0m10:51:25.711054 [debug] [MainThread]: On master: ROLLBACK
+[0m10:51:25.783502 [debug] [MainThread]: On master: COMMIT
+[0m10:51:25.784121 [debug] [MainThread]: Using postgres connection "master"
+[0m10:51:25.784598 [debug] [MainThread]: On master: COMMIT
+[0m10:51:26.148854 [debug] [MainThread]: SQL status: COMMIT in 0.364 seconds
+[0m10:51:26.149479 [debug] [MainThread]: On master: Close
+[0m10:51:26.152815 [debug] [Thread-3 (]: Began running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m10:51:26.153402 [debug] [Thread-2 (]: Began running node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m10:51:26.153904 [debug] [Thread-1 (]: Began running node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m10:51:26.154397 [debug] [Thread-4 (]: Began running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m10:51:26.154917 [info ] [Thread-3 (]: 3 of 6 START test source_not_null_raw_transactions_transaction_date ............ [RUN]
+[0m10:51:26.155536 [info ] [Thread-2 (]: 2 of 6 START test source_not_null_raw_transactions_amount_usd .................. [RUN]
+[0m10:51:26.156121 [info ] [Thread-1 (]: 1 of 6 START test not_null_spend_mart_dept_category_month ...................... [RUN]
+[0m10:51:26.156695 [info ] [Thread-4 (]: 4 of 6 START test source_not_null_raw_transactions_transaction_id .............. [RUN]
+[0m10:51:26.157437 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a'
+[0m10:51:26.158069 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd'
+[0m10:51:26.158588 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_mart_mart, now test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0)
+[0m10:51:26.159196 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047'
+[0m10:51:26.159680 [debug] [Thread-3 (]: Began compiling node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m10:51:26.160144 [debug] [Thread-2 (]: Began compiling node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m10:51:26.160600 [debug] [Thread-1 (]: Began compiling node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m10:51:26.161064 [debug] [Thread-4 (]: Began compiling node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m10:51:26.187934 [debug] [Thread-3 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"
+[0m10:51:26.189658 [debug] [Thread-2 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"
+[0m10:51:26.194071 [debug] [Thread-1 (]: Writing injected SQL for node "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"
+[0m10:51:26.198233 [debug] [Thread-4 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"
+[0m10:51:26.200091 [debug] [Thread-4 (]: Began executing node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m10:51:26.200723 [debug] [Thread-1 (]: Began executing node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m10:51:26.206914 [debug] [Thread-3 (]: Began executing node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m10:51:26.207453 [debug] [Thread-2 (]: Began executing node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m10:51:26.228197 [debug] [Thread-4 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"
+[0m10:51:26.230340 [debug] [Thread-1 (]: Writing runtime sql for node "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"
+[0m10:51:26.233300 [debug] [Thread-3 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"
+[0m10:51:26.235557 [debug] [Thread-2 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"
+[0m10:51:26.236744 [debug] [Thread-1 (]: Using postgres connection "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"
+[0m10:51:26.237208 [debug] [Thread-1 (]: On test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select dept_category_month
+from "postgres"."mart_mart"."spend_mart"
+where dept_category_month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:51:26.237669 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:51:26.238251 [debug] [Thread-4 (]: Using postgres connection "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"
+[0m10:51:26.238801 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from "postgres"."raw"."transactions"
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:51:26.239250 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:51:26.239784 [debug] [Thread-3 (]: Using postgres connection "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"
+[0m10:51:26.240518 [debug] [Thread-2 (]: Using postgres connection "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"
+[0m10:51:26.241025 [debug] [Thread-3 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_date
+from "postgres"."raw"."transactions"
+where transaction_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:51:26.241531 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount_usd
+from "postgres"."raw"."transactions"
+where amount_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:51:26.241976 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:51:26.242397 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:51:27.851943 [debug] [Thread-3 (]: SQL status: SELECT 1 in 1.610 seconds
+[0m10:51:27.852778 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "mart_mart.spend_mart" does not exist
+LINE 18: from "postgres"."mart_mart"."spend_mart"
+              ^
+
+[0m10:51:27.853358 [debug] [Thread-2 (]: SQL status: SELECT 1 in 1.611 seconds
+[0m10:51:27.853929 [debug] [Thread-4 (]: SQL status: SELECT 1 in 1.615 seconds
+[0m10:51:27.859461 [debug] [Thread-3 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a: ROLLBACK
+[0m10:51:27.860126 [debug] [Thread-1 (]: On test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0: ROLLBACK
+[0m10:51:27.862112 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd: ROLLBACK
+[0m10:51:27.863924 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047: ROLLBACK
+[0m10:51:28.138069 [debug] [Thread-1 (]: On test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0: Close
+[0m10:51:28.139005 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd: Close
+[0m10:51:28.139495 [debug] [Thread-3 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a: Close
+[0m10:51:28.140123 [debug] [Thread-4 (]: On test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047: Close
+[0m10:51:28.143962 [info ] [Thread-2 (]: 2 of 6 PASS source_not_null_raw_transactions_amount_usd ........................ [[32mPASS[0m in 1.99s]
+[0m10:51:28.145285 [debug] [Thread-2 (]: Finished running node test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd
+[0m10:51:28.146032 [info ] [Thread-4 (]: 4 of 6 PASS source_not_null_raw_transactions_transaction_id .................... [[32mPASS[0m in 1.99s]
+[0m10:51:28.146830 [info ] [Thread-3 (]: 3 of 6 PASS source_not_null_raw_transactions_transaction_date .................. [[32mPASS[0m in 1.99s]
+[0m10:51:28.147483 [debug] [Thread-2 (]: Began running node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m10:51:28.148716 [debug] [Thread-4 (]: Finished running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047
+[0m10:51:28.149632 [debug] [Thread-3 (]: Finished running node test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a
+[0m10:51:28.150242 [info ] [Thread-2 (]: 5 of 6 START test source_unique_raw_transactions_transaction_id ................ [RUN]
+[0m10:51:28.151161 [debug] [Thread-4 (]: Began running node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m10:51:28.152088 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.brex_spend_intelligence.source_not_null_raw_transactions_amount_usd.31a383f2fd, now test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63)
+[0m10:51:28.153299 [debug] [Thread-2 (]: Began compiling node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m10:51:28.152758 [info ] [Thread-4 (]: 6 of 6 START test unique_spend_mart_dept_category_month ........................ [RUN]
+[0m10:51:28.162019 [debug] [Thread-2 (]: Writing injected SQL for node "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"
+[0m10:51:28.162703 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_id.a265c9f047, now test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145)
+[0m10:51:28.163446 [debug] [Thread-4 (]: Began compiling node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m10:51:28.167886 [debug] [Thread-4 (]: Writing injected SQL for node "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"
+[0m10:51:28.168421 [debug] [Thread-2 (]: Began executing node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m10:51:28.170887 [debug] [Thread-2 (]: Writing runtime sql for node "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"
+[0m10:51:28.171694 [debug] [Thread-4 (]: Began executing node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m10:51:28.174234 [debug] [Thread-4 (]: Writing runtime sql for node "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"
+[0m10:51:28.175053 [debug] [Thread-2 (]: Using postgres connection "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"
+[0m10:51:28.175621 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "postgres"."raw"."transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:51:28.176106 [debug] [Thread-4 (]: Using postgres connection "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"
+[0m10:51:28.179869 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:51:28.180761 [debug] [Thread-1 (]: Database Error in test not_null_spend_mart_dept_category_month (models/schema.yml)
+  relation "mart_mart.spend_mart" does not exist
+  LINE 18: from "postgres"."mart_mart"."spend_mart"
+                ^
+  compiled code at target/run/brex_spend_intelligence/models/schema.yml/not_null_spend_mart_dept_category_month.sql
+[0m10:51:28.181290 [debug] [Thread-4 (]: On test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    dept_category_month as unique_field,
+    count(*) as n_records
+
+from "postgres"."mart_mart"."spend_mart"
+where dept_category_month is not null
+group by dept_category_month
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:51:28.182062 [error] [Thread-1 (]: 1 of 6 ERROR not_null_spend_mart_dept_category_month ........................... [[31mERROR[0m in 2.02s]
+[0m10:51:28.182578 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:51:28.183254 [debug] [Thread-1 (]: Finished running node test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0
+[0m10:51:28.184097 [debug] [Thread-7 (]: Marking all children of 'test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0' to be skipped because of status 'error'.  Reason: Database Error in test not_null_spend_mart_dept_category_month (models/schema.yml)
+  relation "mart_mart.spend_mart" does not exist
+  LINE 18: from "postgres"."mart_mart"."spend_mart"
+                ^
+  compiled code at target/run/brex_spend_intelligence/models/schema.yml/not_null_spend_mart_dept_category_month.sql.
+[0m10:51:29.041864 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.862 seconds
+[0m10:51:29.042513 [debug] [Thread-4 (]: Postgres adapter: Postgres error: relation "mart_mart.spend_mart" does not exist
+LINE 19: from "postgres"."mart_mart"."spend_mart"
+              ^
+
+[0m10:51:29.044455 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63: ROLLBACK
+[0m10:51:29.045021 [debug] [Thread-4 (]: On test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145: ROLLBACK
+[0m10:51:29.118957 [debug] [Thread-2 (]: On test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63: Close
+[0m10:51:29.119948 [debug] [Thread-4 (]: On test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145: Close
+[0m10:51:29.121052 [info ] [Thread-2 (]: 5 of 6 PASS source_unique_raw_transactions_transaction_id ...................... [[32mPASS[0m in 0.97s]
+[0m10:51:29.123414 [debug] [Thread-2 (]: Finished running node test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63
+[0m10:51:29.127854 [debug] [Thread-4 (]: Database Error in test unique_spend_mart_dept_category_month (models/schema.yml)
+  relation "mart_mart.spend_mart" does not exist
+  LINE 19: from "postgres"."mart_mart"."spend_mart"
+                ^
+  compiled code at target/run/brex_spend_intelligence/models/schema.yml/unique_spend_mart_dept_category_month.sql
+[0m10:51:29.128542 [error] [Thread-4 (]: 6 of 6 ERROR unique_spend_mart_dept_category_month ............................. [[31mERROR[0m in 0.97s]
+[0m10:51:29.129353 [debug] [Thread-4 (]: Finished running node test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145
+[0m10:51:29.130050 [debug] [Thread-7 (]: Marking all children of 'test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145' to be skipped because of status 'error'.  Reason: Database Error in test unique_spend_mart_dept_category_month (models/schema.yml)
+  relation "mart_mart.spend_mart" does not exist
+  LINE 19: from "postgres"."mart_mart"."spend_mart"
+                ^
+  compiled code at target/run/brex_spend_intelligence/models/schema.yml/unique_spend_mart_dept_category_month.sql.
+[0m10:51:29.131655 [debug] [MainThread]: On master: COMMIT
+[0m10:51:29.132105 [debug] [MainThread]: Using postgres connection "master"
+[0m10:51:29.132522 [debug] [MainThread]: On master: COMMIT
+[0m10:51:29.132894 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:51:29.947612 [debug] [MainThread]: SQL status: COMMIT in 0.815 seconds
+[0m10:51:29.948365 [debug] [MainThread]: On master: Close
+[0m10:51:29.949265 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:51:29.949737 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.not_null_spend_mart_dept_category_month.0b13e65ab0' was properly closed.
+[0m10:51:29.950182 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.source_not_null_raw_transactions_transaction_date.0770355d4a' was properly closed.
+[0m10:51:29.950620 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.source_unique_raw_transactions_transaction_id.23fc7e5a63' was properly closed.
+[0m10:51:29.951058 [debug] [MainThread]: Connection 'test.brex_spend_intelligence.unique_spend_mart_dept_category_month.6f20d85145' was properly closed.
+[0m10:51:29.951559 [info ] [MainThread]: 
+[0m10:51:29.952081 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 6.88 seconds (6.88s).
+[0m10:51:29.954155 [debug] [MainThread]: Command end result
+[0m10:51:29.981929 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m10:51:29.983898 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m10:51:29.992174 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/run_results.json
+[0m10:51:29.992629 [info ] [MainThread]: 
+[0m10:51:29.993054 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m10:51:29.993442 [info ] [MainThread]: 
+[0m10:51:29.993899 [error] [MainThread]: [31mFailure in test not_null_spend_mart_dept_category_month (models/schema.yml)[0m
+[0m10:51:29.994343 [error] [MainThread]:   Database Error in test not_null_spend_mart_dept_category_month (models/schema.yml)
+  relation "mart_mart.spend_mart" does not exist
+  LINE 18: from "postgres"."mart_mart"."spend_mart"
+                ^
+  compiled code at target/run/brex_spend_intelligence/models/schema.yml/not_null_spend_mart_dept_category_month.sql
+[0m10:51:29.994731 [info ] [MainThread]: 
+[0m10:51:29.995152 [info ] [MainThread]:   compiled code at target/compiled/brex_spend_intelligence/models/schema.yml/not_null_spend_mart_dept_category_month.sql
+[0m10:51:29.995514 [info ] [MainThread]: 
+[0m10:51:29.995997 [error] [MainThread]: [31mFailure in test unique_spend_mart_dept_category_month (models/schema.yml)[0m
+[0m10:51:29.996532 [error] [MainThread]:   Database Error in test unique_spend_mart_dept_category_month (models/schema.yml)
+  relation "mart_mart.spend_mart" does not exist
+  LINE 19: from "postgres"."mart_mart"."spend_mart"
+                ^
+  compiled code at target/run/brex_spend_intelligence/models/schema.yml/unique_spend_mart_dept_category_month.sql
+[0m10:51:29.996959 [info ] [MainThread]: 
+[0m10:51:29.997446 [info ] [MainThread]:   compiled code at target/compiled/brex_spend_intelligence/models/schema.yml/unique_spend_mart_dept_category_month.sql
+[0m10:51:29.997962 [info ] [MainThread]: 
+[0m10:51:29.998469 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=2 SKIP=0 NO-OP=0 TOTAL=6
+[0m10:51:30.002089 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 7.849956, "process_in_blocks": "0", "process_kernel_time": 0.407353, "process_mem_max_rss": "133177344", "process_out_blocks": "0", "process_user_time": 2.899113}
+[0m10:51:30.002747 [debug] [MainThread]: Command `dbt test` failed at 10:51:30.002611 after 7.85 seconds
+[0m10:51:30.003198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b6cbf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cda4680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cda4aa0>]}
+[0m10:51:30.003625 [debug] [MainThread]: Flushing usage events
+[0m10:51:30.479444 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:52:48.992207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087caba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a113610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a1134d0>]}
+
+
+============================== 10:52:48.997522 | a14db68b-ec44-4486-b55c-860e1d604f90 ==============================
+[0m10:52:48.997522 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:52:48.998186 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'write_json': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --profiles-dir .', 'profiles_dir': '.', 'no_print': 'None', 'warn_error': 'None', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'log_path': '/Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/logs', 'fail_fast': 'False', 'printer_width': '80', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'static_parser': 'True', 'empty': 'False', 'quiet': 'False', 'version_check': 'True', 'partial_parse': 'True', 'log_format': 'default'}
+[0m10:52:49.261224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a14db68b-ec44-4486-b55c-860e1d604f90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109284770>]}
+[0m10:52:49.370381 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a14db68b-ec44-4486-b55c-860e1d604f90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107bc68b0>]}
+[0m10:52:49.371225 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m10:52:49.488907 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m10:52:49.599485 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m10:52:49.599923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a14db68b-ec44-4486-b55c-860e1d604f90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10af85650>]}
+[0m10:52:51.271750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a14db68b-ec44-4486-b55c-860e1d604f90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a252f30>]}
+[0m10:52:51.367977 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m10:52:51.370173 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m10:52:51.386115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a14db68b-ec44-4486-b55c-860e1d604f90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b5e4750>]}
+[0m10:52:51.386637 [info ] [MainThread]: Found 1 model, 6 data tests, 1 source, 464 macros
+[0m10:52:51.387022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a14db68b-ec44-4486-b55c-860e1d604f90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10af37790>]}
+[0m10:52:51.389087 [info ] [MainThread]: 
+[0m10:52:51.389507 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:52:51.389848 [info ] [MainThread]: 
+[0m10:52:51.390379 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:52:51.391210 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m10:52:51.451018 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m10:52:51.451465 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:52:51.451800 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:52:52.924973 [debug] [ThreadPool]: SQL status: SELECT 14 in 1.473 seconds
+[0m10:52:52.926963 [debug] [ThreadPool]: On list_postgres: Close
+[0m10:52:52.927961 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now create_postgres_public_mart)
+[0m10:52:52.928550 [debug] [ThreadPool]: Creating schema "database: "postgres"
+schema: "public_mart"
+"
+[0m10:52:52.934514 [debug] [ThreadPool]: Using postgres connection "create_postgres_public_mart"
+[0m10:52:52.934945 [debug] [ThreadPool]: On create_postgres_public_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "create_postgres_public_mart"} */
+create schema if not exists "public_mart"
+[0m10:52:52.935277 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:52:54.373631 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 1.438 seconds
+[0m10:52:54.375594 [debug] [ThreadPool]: On create_postgres_public_mart: COMMIT
+[0m10:52:54.376125 [debug] [ThreadPool]: Using postgres connection "create_postgres_public_mart"
+[0m10:52:54.376616 [debug] [ThreadPool]: On create_postgres_public_mart: COMMIT
+[0m10:52:54.499766 [debug] [ThreadPool]: SQL status: COMMIT in 0.123 seconds
+[0m10:52:54.500665 [debug] [ThreadPool]: On create_postgres_public_mart: Close
+[0m10:52:54.502589 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_postgres_public_mart, now list_postgres_public_mart)
+[0m10:52:54.510010 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_mart"
+[0m10:52:54.510502 [debug] [ThreadPool]: On list_postgres_public_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "list_postgres_public_mart"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_mart'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_mart'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_mart'
+  
+[0m10:52:54.510931 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:52:55.829752 [debug] [ThreadPool]: SQL status: SELECT 0 in 1.319 seconds
+[0m10:52:55.831607 [debug] [ThreadPool]: On list_postgres_public_mart: ROLLBACK
+[0m10:52:55.933644 [debug] [ThreadPool]: On list_postgres_public_mart: Close
+[0m10:52:55.940295 [debug] [MainThread]: Using postgres connection "master"
+[0m10:52:55.940896 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:52:55.941400 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:52:56.974824 [debug] [MainThread]: SQL status: SELECT 1 in 1.033 seconds
+[0m10:52:56.976846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a14db68b-ec44-4486-b55c-860e1d604f90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b7f8890>]}
+[0m10:52:56.977578 [debug] [MainThread]: On master: ROLLBACK
+[0m10:52:57.192570 [debug] [MainThread]: On master: COMMIT
+[0m10:52:57.193199 [debug] [MainThread]: Using postgres connection "master"
+[0m10:52:57.193734 [debug] [MainThread]: On master: COMMIT
+[0m10:52:57.521161 [debug] [MainThread]: SQL status: COMMIT in 0.327 seconds
+[0m10:52:57.522001 [debug] [MainThread]: On master: Close
+[0m10:52:57.525576 [debug] [Thread-1 (]: Began running node model.brex_spend_intelligence.spend_mart
+[0m10:52:57.526502 [info ] [Thread-1 (]: 1 of 1 START sql table model public_mart.spend_mart ............................ [RUN]
+[0m10:52:57.527220 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_mart, now model.brex_spend_intelligence.spend_mart)
+[0m10:52:57.527754 [debug] [Thread-1 (]: Began compiling node model.brex_spend_intelligence.spend_mart
+[0m10:52:57.538596 [debug] [Thread-1 (]: Writing injected SQL for node "model.brex_spend_intelligence.spend_mart"
+[0m10:52:57.539568 [debug] [Thread-1 (]: Began executing node model.brex_spend_intelligence.spend_mart
+[0m10:52:57.597099 [debug] [Thread-1 (]: Writing runtime sql for node "model.brex_spend_intelligence.spend_mart"
+[0m10:52:57.598218 [debug] [Thread-1 (]: Using postgres connection "model.brex_spend_intelligence.spend_mart"
+[0m10:52:57.598973 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "model.brex_spend_intelligence.spend_mart"} */
+
+  
+    
+
+  create  table "postgres"."public_mart"."spend_mart__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+/*
+  spend_mart.sql
+  ──────────────
+  Aggregates raw.transactions by department, category, and month.
+  Adds month-over-month (MoM) spend change and AI/policy violation rates.
+
+  Columns produced:
+    dept_category_month   Surrogate grain key
+    department
+    category
+    spend_month           First day of the month (DATE)
+    total_spend           Sum of amount_usd
+    transaction_count
+    avg_transaction       Average spend per transaction
+    policy_violation_cnt  Rule-based violations from generate_data.py
+    ai_flagged_cnt        Violations flagged by Claude
+    policy_violation_pct  % of transactions that violated policy
+    ai_flagged_pct        % of transactions AI-flagged
+    prev_month_spend      Spend in the prior calendar month
+    mom_change_usd        Absolute MoM change
+    mom_change_pct        Relative MoM change (NULL for first month in window)
+*/
+
+with
+
+base as (
+
+    select
+        department,
+        category,
+        date_trunc('month', transaction_date)::date as spend_month,
+        amount_usd,
+        policy_violation,
+        coalesce(ai_flagged, false)                 as ai_flagged
+
+    from "postgres"."raw"."transactions"
+    where transaction_date is not null
+
+),
+
+monthly as (
+
+    select
+        department,
+        category,
+        spend_month,
+
+        round(sum(amount_usd)::numeric, 2)          as total_spend,
+        count(*)                                     as transaction_count,
+        round(avg(amount_usd)::numeric, 2)           as avg_transaction,
+
+        sum(case when policy_violation then 1 else 0 end)
+                                                     as policy_violation_cnt,
+        sum(case when ai_flagged       then 1 else 0 end)
+                                                     as ai_flagged_cnt,
+
+        round(
+            100.0 * sum(case when policy_violation then 1 else 0 end)
+            / nullif(count(*), 0), 2
+        )                                            as policy_violation_pct,
+
+        round(
+            100.0 * sum(case when ai_flagged then 1 else 0 end)
+            / nullif(count(*), 0), 2
+        )                                            as ai_flagged_pct
+
+    from base
+    group by 1, 2, 3
+
+),
+
+with_mom as (
+
+    select
+        m.*,
+
+        lag(m.total_spend) over (
+            partition by m.department, m.category
+            order by m.spend_month
+        )                                            as prev_month_spend,
+
+        round(
+            m.total_spend - lag(m.total_spend) over (
+                partition by m.department, m.category
+                order by m.spend_month
+            ), 2
+        )                                            as mom_change_usd,
+
+        round(
+            100.0 * (
+                m.total_spend - lag(m.total_spend) over (
+                    partition by m.department, m.category
+                    order by m.spend_month
+                )
+            ) / nullif(lag(m.total_spend) over (
+                partition by m.department, m.category
+                order by m.spend_month
+            ), 0), 2
+        )                                            as mom_change_pct
+
+    from monthly m
+
+)
+
+select
+    department
+        || '_' || category
+        || '_' || to_char(spend_month, 'YYYY_MM')   as dept_category_month,
+    department,
+    category,
+    spend_month,
+    total_spend,
+    transaction_count,
+    avg_transaction,
+    policy_violation_cnt,
+    ai_flagged_cnt,
+    policy_violation_pct,
+    ai_flagged_pct,
+    prev_month_spend,
+    mom_change_usd,
+    mom_change_pct
+
+from with_mom
+order by department, category, spend_month
+  );
+  
+[0m10:52:57.599722 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:52:59.056659 [debug] [Thread-1 (]: SQL status: SELECT 150 in 1.457 seconds
+[0m10:52:59.073051 [debug] [Thread-1 (]: Using postgres connection "model.brex_spend_intelligence.spend_mart"
+[0m10:52:59.073655 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "model.brex_spend_intelligence.spend_mart"} */
+alter table "postgres"."public_mart"."spend_mart__dbt_tmp" rename to "spend_mart"
+[0m10:52:59.215546 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.141 seconds
+[0m10:52:59.236181 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: COMMIT
+[0m10:52:59.236764 [debug] [Thread-1 (]: Using postgres connection "model.brex_spend_intelligence.spend_mart"
+[0m10:52:59.237244 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: COMMIT
+[0m10:52:59.315458 [debug] [Thread-1 (]: SQL status: COMMIT in 0.078 seconds
+[0m10:52:59.324202 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_mart"."spend_mart__dbt_backup"
+[0m10:52:59.331053 [debug] [Thread-1 (]: Using postgres connection "model.brex_spend_intelligence.spend_mart"
+[0m10:52:59.331587 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "brex_spend", "target_name": "dev", "node_id": "model.brex_spend_intelligence.spend_mart"} */
+drop table if exists "postgres"."public_mart"."spend_mart__dbt_backup" cascade
+[0m10:52:59.403966 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.072 seconds
+[0m10:52:59.406646 [debug] [Thread-1 (]: On model.brex_spend_intelligence.spend_mart: Close
+[0m10:52:59.408595 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a14db68b-ec44-4486-b55c-860e1d604f90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b613ee0>]}
+[0m10:52:59.409268 [info ] [Thread-1 (]: 1 of 1 OK created sql table model public_mart.spend_mart ....................... [[32mSELECT 150[0m in 1.88s]
+[0m10:52:59.409950 [debug] [Thread-1 (]: Finished running node model.brex_spend_intelligence.spend_mart
+[0m10:52:59.411243 [debug] [MainThread]: On master: COMMIT
+[0m10:52:59.411603 [debug] [MainThread]: Using postgres connection "master"
+[0m10:52:59.411932 [debug] [MainThread]: On master: COMMIT
+[0m10:52:59.412245 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:53:00.269931 [debug] [MainThread]: SQL status: COMMIT in 0.858 seconds
+[0m10:53:00.270579 [debug] [MainThread]: On master: Close
+[0m10:53:00.271452 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:53:00.271930 [debug] [MainThread]: Connection 'model.brex_spend_intelligence.spend_mart' was properly closed.
+[0m10:53:00.272453 [info ] [MainThread]: 
+[0m10:53:00.272969 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 8.88 seconds (8.88s).
+[0m10:53:00.274000 [debug] [MainThread]: Command end result
+[0m10:53:00.302348 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/manifest.json
+[0m10:53:00.304586 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/semantic_manifest.json
+[0m10:53:00.311248 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/azharkudaibergenova/tableau_project/brex-spend-intelligence/dbt/target/run_results.json
+[0m10:53:00.311628 [info ] [MainThread]: 
+[0m10:53:00.312048 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:53:00.312413 [info ] [MainThread]: 
+[0m10:53:00.312795 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:53:00.315757 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.435783, "process_in_blocks": "0", "process_kernel_time": 0.425324, "process_mem_max_rss": "142491648", "process_out_blocks": "0", "process_user_time": 4.367774}
+[0m10:53:00.316271 [debug] [MainThread]: Command `dbt run` succeeded at 10:53:00.316150 after 11.44 seconds
+[0m10:53:00.316685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b4d8e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b5fef00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b233450>]}
+[0m10:53:00.317090 [debug] [MainThread]: Flushing usage events
+[0m10:53:00.871596 [debug] [MainThread]: An error was encountered while trying to flush usage events

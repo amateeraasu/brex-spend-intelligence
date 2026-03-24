@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: transactions
+        description: Raw corporate card transactions loaded by the Airflow ingest DAG.
+        columns:
+          - name: transaction_id
+            tests: [unique, not_null]
+          - name: transaction_date
+            tests: [not_null]
+          - name: amount_usd
+            tests: [not_null]
+
+models:
+  - name: spend_mart
+    description: >
+      Monthly spend aggregated by department and category.
+      Includes MoM change, policy violation rates, and AI flag rates.
+    columns:
+      - name: dept_category_month
+        description: Surrogate grain key (department_category_YYYY_MM)
+        tests: [unique, not_null]
+      - name: total_spend
+        description: Total USD spend for the dept/category/month
+      - name: mom_change_pct
+        description: Month-over-month spend change percentage (NULL for first month)
