@@ -56,3 +56,13 @@ SELECT * FROM public_mart.spend_mart
 - Spend by category breakdown (bar chart)
 - Policy violation rate by department (table)
 - MoM spend change % (scorecard)
+
+- 
+## 📊 Business Intelligence (Looker Studio)
+[View Live Interactive Dashboard](https://lookerstudio.google.com/s/oV_FTOqhHSo)
+
+![Dashboard Preview](./assets/dashboard_screenshot.png)
+
+### Key Insights Captured:
+* **Anomaly Detection:** AI-powered classification of policy-breaking spend.
+* **Departmental Efficiency:** MoM growth tracking to identify budget overruns.
