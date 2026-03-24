@@ -61,7 +61,8 @@ SELECT * FROM public_mart.spend_mart
 ## 📊 Business Intelligence (Looker Studio)
 [View Live Interactive Dashboard](https://lookerstudio.google.com/s/oV_FTOqhHSo)
 
-![Dashboard Preview] <img width="1162" height="865" alt="Screenshot 2026-03-24 at 12 54 13" src="https://github.com/user-attachments/assets/b5bc6a9c-488a-4152-8d3b-3e695b443b61" />
+[Dashboard Preview] 
+<img width="1162" height="865" alt="Screenshot 2026-03-24 at 12 54 13" src="https://github.com/user-attachments/assets/b5bc6a9c-488a-4152-8d3b-3e695b443b61" />
 
 ### Key Insights Captured:
 * **Anomaly Detection:** AI-powered classification of policy-breaking spend.
